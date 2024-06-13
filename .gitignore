@@ -1,0 +1,4 @@
+datasets/
+sbatch_log/
+.vscode/
+__pycache__/
