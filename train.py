@@ -26,7 +26,7 @@ def train_model(base_dir, num_epochs=10, batch_size=32, learning_rate=0.0001):
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = CombinedModel(body_parts=len(body_parts)).to(device)
-    #
+    #####
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     
