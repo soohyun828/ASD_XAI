@@ -1,4 +1,7 @@
 datasets/
+asd_ver2_all_5folds_annotation/
 sbatch_log/
 .vscode/
 __pycache__/
+result/
+master.sh

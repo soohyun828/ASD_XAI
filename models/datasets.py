@@ -20,5 +20,6 @@ class HumanFigureDataset(Dataset):
         if self.transform:
             image = self.transform(image)
         part_proportions = self.annotations.iloc[idx, 2:].values.astype(float)
-        label = 1 if self.annotations.iloc[idx, 1] == 'ASD' else 0 # ASD면 1
-        return image, part_proportions, label
+        label = 0 if self.annotations.iloc[idx, 1] == 'ASD' else 1 # ASD면 1
+        
+        return image, part_proportions, label,self.annotations.iloc[idx, 0]
